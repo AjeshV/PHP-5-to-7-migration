@@ -37,7 +37,7 @@ Includes Git, PHP 7.1, Nginx, MySQL.
 
 vagrant box add laravel/homestead
 
-# 4) Docker:
+# 4) Docker.
 php7-dockerized, Docker and Compose environment with MysQL.
 
 Install Docker
@@ -51,4 +51,47 @@ Set .env as,
 DB_HOST=mysql
 REDIS_HOST=redis
 QUEUE_HOST=beanstalkd
+
+# 5) PHP 7 features.
+
+i) Scalar Type Declaration: 
+
+(PHP5) Typehint function parameter with classes, interfaces, callable and array types only, conditional statement to check other types.
+
+function getNumber($n) {
+    if (!is_integer($n)) {
+        throw new Exception("Enter valid number");
+    } return $n;
+}
+
+(PHP7) Not required to check, typehint with string, int, bool and float.
+
+function getNumber(int $n) {
+    return $n;
+}
+getNumber('string');
+
+Error as typehint done with scalar value.
+
+ii) Strong Type Check:
+
+(PHP7) strict_types to avoid coercion that is allowed in PHP 5.
+
+declare(strict_types=1);
+function getNumber(int $n) {
+    return ":" . $n;
+}
+echo getNumber("1");
+
+Finishes with TypeError.
+
+iii) Return Type Declaration:
+
+Coerced in (PHP5), strict_type can be used in (PHP7) that throws type error if the return is other than the type specified.
+
+declare(strict_types=1);
+function divide(int $ft, int $sd): float {...
+
+iv) Spaceship Operator:
+
 
