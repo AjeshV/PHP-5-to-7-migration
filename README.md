@@ -1,5 +1,5 @@
 # PHP-5-to-7-migration
-1) Environment upgrade to PHP 7.
+# 1) Environment upgrade to PHP 7.
 
 On Linux Ubuntu, install PHP 7:
 
@@ -17,7 +17,7 @@ sudo yum install php70w-mysql
 
 Verify with php -v
 
-2) Multiple system wide versions involving MySQL, SQLite, OpenSSL or debug can be built and installed using PHPBrew. It is integrated with bash/zsh shell.
+# 2) Multiple system wide versions involving MySQL, SQLite, OpenSSL or debug can be built and installed using PHPBrew. It is integrated with bash/zsh shell.
 
 curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
 chmod +x phpbrew
@@ -31,13 +31,13 @@ phpbrew use php-7.1.0
 
 With variants example command: phpbrew install 7.0.0 +mysql+mcrypt+openssl+debug+sqlite
 
-3) Laravel Homestead - Vagrant Box to manage Virtual Machines, without installing PHP.
+# 3) Laravel Homestead - Vagrant Box to manage Virtual Machines, without installing PHP.
 
 Includes Git, PHP 7.1, Nginx, MySQL.
 
 vagrant box add laravel/homestead
 
-4) Docker:
+# 4) Docker:
 php7-dockerized, Docker and Compose environment with MysQL.
 
 Install Docker
