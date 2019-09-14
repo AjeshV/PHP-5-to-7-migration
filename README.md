@@ -1,5 +1,5 @@
 # PHP-5-to-7-migration
-# 1) Environment upgrade to PHP 7
+# 1) Environment Upgrade to PHP 7
 
 On Linux Ubuntu, install PHP 7:
 
@@ -21,7 +21,7 @@ sudo yum install php70w-mysql
 
 Verify with php -v
 
-# 2) Multiple system wide versions using PHPBrew
+# 2) Multiple System Wide Versions using PHPBrew
 
 Involving MySQL, SQLite, OpenSSL or debug are built and installed, integrated with bash/zsh shell.
 
@@ -68,7 +68,7 @@ REDIS_HOST=redis
 QUEUE_HOST=beanstalkd
 ```
 
-# 5) PHP 7 features
+# 5) PHP 7 Features
 
 i) Scalar Type Declaration: 
 ---------------------------
