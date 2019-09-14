@@ -57,6 +57,7 @@ QUEUE_HOST=beanstalkd
 # 5) PHP 7 features.
 
 i) Scalar Type Declaration: 
+---------------------------
 
 (PHP5) Typehint function parameter with classes, interfaces, callable and array types only, conditional statement to check other types.
 
