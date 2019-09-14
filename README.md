@@ -213,9 +213,9 @@ foreach ($gen as $val){
 
 ## 6) Tools to migrate
 
-php7mar: Provides report on PHP 5 codebase compatibility with PHP 7.
-php7cc: command line tool to migrate, highlighting syntaxes and errors.
-Phan: marks incorrect statements.
-phpto7aid: marks PHP5 lines, that wont work in 7.
+php7mar: Provides report on PHP 5 codebase compatibility with PHP 7. <br />
+php7cc: command line tool to migrate, highlighting syntaxes and errors. <br />
+Phan: marks incorrect statements. <br />
+phpto7aid: marks PHP5 lines, that wont work in 7. <br />
 PhpStorm 10: PHP 7 compatibility inspection tool.
 
