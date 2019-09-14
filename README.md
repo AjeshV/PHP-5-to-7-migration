@@ -58,7 +58,6 @@ QUEUE_HOST=beanstalkd
 
 i) Scalar Type Declaration: 
 ---------------------------
-
 (PHP5) Typehint function parameter with classes, interfaces, callable and array types only, conditional statement to check other types.
 
 function getNumber($n) {
@@ -77,7 +76,7 @@ getNumber('string');
 Error as typehint done with scalar value.
 
 ii) Strong Type Check:
-
+----------------------
 (PHP7) strict_types to avoid coercion that is allowed in PHP 5.
 
 declare(strict_types=1);
@@ -89,31 +88,31 @@ echo getNumber("1");
 Finishes with TypeError.
 
 iii) Return Type Declaration:
-
+-----------------------------
 Coerced in (PHP5), strict_type can be used in (PHP7) that throws type error if the return is other than the type specified.
 
 declare(strict_types=1);
 function divide(int $ft, int $sd): float {...
 
 iv) Spaceship Operator:
-
+-----------------------
 $x <=> $y 
 
 -1 if x is less than y, 0 if they are equal, 1 if x is greater.
 
 v) Array Constants:
-
+-------------------
 define() in (PHP5) accepts only scalar values, (PHP7) allows constant arrays.
 
 vi) Group Use Declarations:
-
+---------------------------
 Multiple classes, functions and constants should be written seperately in (PHP5), they can be grouped in (PHP7),
 
 use Unicodeveloper\Exceptions\{
     IsNull, UnknownMethod };
 
 vii) Anonymous Classes:
-
+-----------------------
 Using objects to implement throwaway interfaces.
 
 $book = new class implements SimpleInterface {
@@ -125,7 +124,7 @@ $book = new class implements SimpleInterface {
 $library = new Lib($book);
 
 viii) Enhanced Unicode Support:
-
+-------------------------------
 Hexadecimal code is appended to "\u" to get emoji output.
 
 function getBook() {
@@ -135,13 +134,13 @@ function getBook() {
 getBook();
 
 ix) Null Coalescing Operator:
-
+-----------------------------
 bookname is assigned if it exists, else CS
 
 $BookName = $_GET['bookname'] ?? 'CS';
 
 x) Closure on Call:
-
+-------------------
 (PHP7) Call on closure to bind an object,
 
 class Name {
@@ -155,13 +154,13 @@ $getName = function() {
 $getName->call(new Name());
 
 xi) Expectations and Assertions:
-
+--------------------------------
 Can take 2 arguments in a custom error message, being instance of Exception.
 
 assert('$project instanceof \Unicodeveloper\Project', new ProjectException('not a project object'));
 
 xii) Generator Return Expressions:
-
+----------------------------------
 Enables return to be used within generator with yielding values.
 
 $gen = (function() {
