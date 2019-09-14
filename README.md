@@ -98,7 +98,9 @@ iv) Spaceship Operator:
 -----------------------
 $x <=> $y 
 
--1 if x is less than y, 0 if they are equal, 1 if x is greater.
+-1 if x is less than y, 
+0 if they are equal, 
+1 if x is greater.
 
 v) Array Constants:
 -------------------
@@ -167,7 +169,7 @@ $gen = (function() {
     yield 1;
     yield 2;
     
-    return 3:
+   return 3:
 })();
 
 foreach ($gen as $val){
