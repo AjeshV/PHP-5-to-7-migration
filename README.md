@@ -28,14 +28,14 @@ sudo mv phpbrew /usr/local/bin/phpbrew
 Add /usr/local/bin to $PATH environment variable.
 
 phpbrew self-update
-phpbrew install next as php-7.1.0
-phpbrew use php-7.1.0
+phpbrew install next as php-7.3.0
+phpbrew use php-7.3.0
 
 With variants example command: phpbrew install 7.0.0 +mysql+mcrypt+openssl+debug+sqlite
 
 # 3) Laravel Homestead.
 
-Vagrant Box to manage Virtual Machines, without installing PHP. Includes Git, PHP 7.1, Nginx, MySQL.
+Vagrant Box to manage Virtual Machines, without installing PHP. Includes Git, PHP 7.3, Nginx, MySQL.
 
 vagrant box add laravel/homestead
 
@@ -96,4 +96,79 @@ function divide(int $ft, int $sd): float {...
 
 iv) Spaceship Operator:
 
+$x <=> $y 
 
+-1 if x is less than y, 0 if they are equal, 1 if x is greater.
+
+v) Array Constants:
+
+define() in (PHP5) accepts only scalar values, (PHP7) allows constant arrays.
+
+vi) Group Use Declarations:
+
+Multiple classes, functions and constants should be written seperately in (PHP5), they can be grouped in (PHP7),
+
+use Unicodeveloper\Exceptions\{
+    IsNull, UnknownMethod };
+
+vii) Anonymous Classes:
+
+Using objects to implement throwaway interfaces.
+
+$book = new class implements SimpleInterface {
+    public function bookName($Name) {
+        return $Name
+    }
+};
+
+$library = new Lib($book);
+
+viii) Enhanced Unicode Support:
+
+Hexadecimal code is appended to "\u" to get emoji output.
+
+function getBook() {
+    echo "\u{1E3D0}";
+}
+
+getBook();
+
+ix) Null Coalescing Operator:
+
+bookname is assigned if it exists, else CS
+
+$BookName = $_GET['bookname'] ?? 'CS';
+
+x) Closure on Call:
+
+(PHP7) Call on closure to bind an object,
+
+class Name {
+    private $name = "Florence";
+}
+
+$getName = function() {
+    echo $this->name;
+};
+
+$getName->call(new Name());
+
+xi) Expectations and Assertions:
+
+Can take 2 arguments in a custom error message, being instance of Exception.
+
+assert('$project instanceof \Unicodeveloper\Project', new ProjectException('not a project object'));
+
+xii) Generator Return Expressions:
+
+Enables return to be used within generator with yielding values.
+
+$gen = (function() {
+    yield 1;
+    yield 2;
+    
+    return 3:
+})();
+
+foreach ($gen as $val){
+}
